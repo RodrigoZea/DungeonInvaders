@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 1401654909}
   - component: {fileID: 1401654908}
   - component: {fileID: 1401654910}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,6 +417,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1aae26fd0dc74140b834af0fc90e5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  platformLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
   speed: 5
   jumpForce: 5
 --- !u!61 &1468555229
