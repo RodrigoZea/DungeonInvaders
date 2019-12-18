@@ -364,6 +364,12 @@ MonoBehaviour:
   - {fileID: 7479786620327888410, guid: 6df99a9f9a749e3499116d5ff7ffd04c, type: 3}
   moveAmount: 10
   startTimeBtwRoom: 0.25
+  minX: -5
+  maxX: 25
+  minY: -25
+  room:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!4 &756072114
 Transform:
   m_ObjectHideFlags: 0
