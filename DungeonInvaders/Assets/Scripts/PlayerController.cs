@@ -10,12 +10,15 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D prb;
     private Vector2 movSpeed;
     private BoxCollider2D boxCollider2d;
+    private SpriteRenderer sr;
+    private bool facingRight;
 
     // Start is called before the first frame update
     void Start()
     {
         prb = GetComponent<Rigidbody2D>();
         boxCollider2d = GetComponent<BoxCollider2D>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -24,6 +27,14 @@ public class PlayerController : MonoBehaviour
         Jump();
         Vector3 mov = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
         transform.position += mov * Time.deltaTime * speed;
+
+        if (mov.x < 0)
+        {
+            sr.flipX = false;
+        }
+        else if (mov.x > 0) {
+            sr.flipX = true;
+        }
     }
 
     void Jump() {
